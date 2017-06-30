@@ -1,0 +1,55 @@
+<!--
+  Generated template for the SelbstausloeserPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Selbstauslöser</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-8>
+        Verzögerung in Sekunden
+      </ion-col>
+      <ion-col col-4 text-right>
+        <ion-badge color="secondary">{{ timerDelay }}</ion-badge>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-range color="secondary" min="1" max="20" step="1" [(ngModel)]="timerDelay" large></ion-range>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-8>
+        Fotos
+      </ion-col>
+      <ion-col col-4 text-right>
+        <ion-badge>{{ timerPictures }}</ion-badge>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-range min="1" max="10" step="1" [(ngModel)]="timerPictures" large></ion-range>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col center text-center>
+        <button (click)="startTimer()" large ion-button round color="secondary">Start Selbstauslöser</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col center text-center>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

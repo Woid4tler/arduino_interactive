@@ -1,0 +1,58 @@
+<!--
+  Generated template for the ZeitrafferPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Zeitraffer</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-8>
+        Minuten
+      </ion-col>
+      <ion-col col-4 text-right>
+        <ion-badge color="secondary">{{ timelapseDelayMinutes }}</ion-badge>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-range color="secondary" min="0" max="60" step="1" [(ngModel)]="timelapseDelayMinutes" large></ion-range>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-8>
+        Sekunden
+      </ion-col>
+      <ion-col col-4 text-right>
+        <ion-badge color="secondary">{{ timelapseDelaySeconds }}</ion-badge>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-range color="secondary" min="0" max="60" step="1" [(ngModel)]="timelapseDelaySeconds" large></ion-range>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6 center text-center>
+        <button (click)="startTimelapse()" large ion-button round color="secondary">Start</button>
+      </ion-col>
+      <ion-col col-6 center text-center>
+        <button (click)="stopTimelapse()" large ion-button round color="danger">Stop</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col center text-center>
+        <ion-input [(ngModel)]="timelapseStatus"></ion-input>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
